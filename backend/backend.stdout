@@ -1,0 +1,21 @@
+[Embedder] Loading embedding model: sentence-transformers/all-MiniLM-L6-v2
+[Embedder] Model loaded.
+[Embedder] Loading embedding model: sentence-transformers/all-MiniLM-L6-v2
+[Embedder] Model loaded.
+INFO:     127.0.0.1:64162 - "GET /api/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64164 - "GET /api/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64166 - "GET /api/repos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64170 - "GET /api/repos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64174 - "GET /api/repos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64180 - "GET /api/repos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64184 - "GET /api/repos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64193 - "GET /api/repos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64198 - "GET /api/repos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64202 - "GET /api/repos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64209 - "GET /api/repos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64226 - "GET /api/repos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64231 - "GET /api/repos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64249 - "GET /api/repos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64276 - "GET /api/repos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64288 - "GET /api/repos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64306 - "GET /api/repos HTTP/1.1" 200 OK

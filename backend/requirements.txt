@@ -1,0 +1,50 @@
+# Core API
+fastapi
+uvicorn[standard]
+python-dotenv
+pydantic
+
+# LangChain ecosystem (flexible versions to avoid conflicts)
+langchain
+langchain-community
+langchain-groq
+langchain-huggingface
+
+# Vector store
+chromadb
+
+# Embeddings (free, local)
+sentence-transformers
+
+# Code parsing
+tree_sitter>=0.21.0
+tree-sitter-python
+tree-sitter-javascript
+tree-sitter-typescript
+tree-sitter-java
+tree-sitter-go
+tree-sitter-c
+tree-sitter-cpp
+tree-sitter-rust
+tree-sitter-ruby
+tree-sitter-php
+tree-sitter-kotlin
+tree-sitter-swift
+tree-sitter-html
+tree-sitter-css
+tree-sitter-sql
+
+# GitHub / Git
+gitpython
+
+# Utilities
+rank-bm25
+tiktoken
+httpx
+
+# Database & Authentication
+sqlalchemy
+passlib
+bcrypt
+pyjwt
+email-validator
