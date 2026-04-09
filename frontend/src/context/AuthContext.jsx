@@ -1,9 +1,9 @@
 import { createContext, useState, useEffect } from "react";
 import axios from "axios";
 
-// This URL will be used in production (Vercel). 
-// Locally it fallbacks to localhost:8000
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8000";
+// In production (Vercel), we use relative paths so Vercel Rewrites can handle the proxy.
+// This avoids "Mixed Content" (HTTPS -> HTTP) issues.
+const API_URL = import.meta.env.VITE_API_URL || (import.meta.env.PROD ? "" : "http://localhost:8000");
 axios.defaults.baseURL = API_URL;
 
 export const AuthContext = createContext();
