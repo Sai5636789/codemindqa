@@ -1,6 +1,11 @@
 import { createContext, useState, useEffect } from "react";
 import axios from "axios";
 
+// This URL will be used in production (Vercel). 
+// Locally it fallbacks to localhost:8000
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8000";
+axios.defaults.baseURL = API_URL;
+
 export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {

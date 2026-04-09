@@ -17,7 +17,7 @@ import axios from 'axios'
 import { Trash2, RefreshCw, GitBranch, Zap, LogOut } from 'lucide-react'
 import { AuthContext } from '../context/AuthContext'
 
-const API_BASE = '/api'
+// Using global axios.defaults.baseURL configured in AuthContext
 
 export default function Sidebar({ selectedRepo, onSelectRepo }) {
   const [repos, setRepos]       = useState([])
@@ -42,7 +42,7 @@ export default function Sidebar({ selectedRepo, onSelectRepo }) {
   // Fetch repo list from backend
   const fetchRepos = useCallback(async () => {
     try {
-      const res = await axios.get(`${API_BASE}/repos`)
+      const res = await axios.get("/api/repos")
       setRepos(res.data.repos || [])
     } catch {
       // Silently fail during polling
@@ -63,7 +63,7 @@ export default function Sidebar({ selectedRepo, onSelectRepo }) {
     setError('')
     setIndexing(true)
     try {
-      await axios.post(`${API_BASE}/repos/index`, {
+      await axios.post("/api/repos/index", {
         repo_url: repoUrl.trim(),
         repo_name: repoName.trim(),
         github_pat: githubPat.trim() || null,
@@ -81,7 +81,7 @@ export default function Sidebar({ selectedRepo, onSelectRepo }) {
   const handleDelete = async (e, name) => {
     e.stopPropagation()
     if (!confirm(`Delete '${name}' and all its indexed data?`)) return
-    await axios.delete(`${API_BASE}/repos/${name}`)
+    await axios.delete(`/api/repos/${name}`)
     if (selectedRepo === name) onSelectRepo(null)
     fetchRepos()
   }

@@ -25,7 +25,7 @@ import axios from 'axios'
 import MessageBubble from './MessageBubble'
 import { Send, Bot, AlertCircle } from 'lucide-react'
 
-const API_BASE = '/api'
+// Using global axios.defaults.baseURL configured in AuthContext
 
 // We will track sessionId in state so it properly links to backend history
 
@@ -70,7 +70,7 @@ export default function ChatInterface({ selectedRepo }) {
     const fetchHistory = async () => {
       setLoading(true)
       try {
-        const res = await axios.get(`${API_BASE}/chat/history/${selectedRepo}`)
+        const res = await axios.get(`/api/chat/history/${selectedRepo}`)
         const history = res.data.history
         if (history && history.length > 0) {
           // Resume the most recent session
@@ -110,7 +110,7 @@ export default function ChatInterface({ selectedRepo }) {
     }
 
     try {
-      const res = await axios.post(`${API_BASE}/chat`, {
+      const res = await axios.post("/api/chat", {
         question: q,
         repo_name: selectedRepo,
         session_id: sessionId,

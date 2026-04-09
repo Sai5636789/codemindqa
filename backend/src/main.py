@@ -40,10 +40,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# ✅ Add /api prefix here
-app.include_router(auth_router, prefix="/api")
-app.include_router(repos_router, prefix="/api")
-app.include_router(chat_router, prefix="/api")
+# Register specialized routers
+app.include_router(auth_router)
+app.include_router(repos_router)
+app.include_router(chat_router)
 
 @app.get("/")
 def health_check():
