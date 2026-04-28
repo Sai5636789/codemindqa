@@ -1,7 +1,7 @@
 import chromadb
 import json
 
-# 1. Connect to our persistent local ChromaDB storage
+# 1. Connect to our persistent local ChromaDB storage 
 client = chromadb.PersistentClient(path="./data/chroma")
 
 # 2. List all existing collections (CodeMind maps one collection per User+Repository)
